@@ -8,13 +8,16 @@ import Foundation
 
 class DataManager {
    static let mockPosts = [
-            Post(id: UUID(), title: "Morning glory", image: "morning_glory"),
-            Post(id: UUID(), title: "My Cherry Tomatoes", image: "cherry_tomato"),
-            Post(id: UUID(), title: "Aloe Vera in my garden", image: "aloe_vera"),
-            Post(id: UUID(), title: "Beautiful Roses", image: "rose"),
-            Post(id: UUID(), title: "From where I can get good seeds", image: nil),
-            Post(id: UUID(), title: "My Spinach", image: "spinach"),
-            Post(id: UUID(), title: "Happy Gardening", image: "gardening")
+    Post(title: "Morning glory", image: "morning_glory"),
+    Post(title: "Please guide me from where I can get good seeds?", image: nil),
+    Post(title: "My Cherry Tomatoes", image: "cherry_tomato"),
+    Post(title: "Aloe Vera in my garden", image: "aloe_vera"),
+    Post(title: "Beautiful Roses", image: "rose"),
+    Post(title: "My Spinach plan", image: "spinach"),
+    Post(title: "Happy Gardening! my small kitchen garden", image: "kithen_garden"),
+    Post(title: "Grow Garlic at home easily", image: "garlic"),
+    Post(title: "Look at my Jack Fruit plant :)", image: "jack_fruit"),
+    Post(title: "Petunia in my beautiful lawn", image: "petunia")
         ]
     
 }

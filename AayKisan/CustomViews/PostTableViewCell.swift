@@ -16,7 +16,10 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var vStackComments: UIStackView!
     @IBOutlet weak var tFComment: UITextField!
     @IBOutlet weak var btnComment: UIButton!
+    @IBOutlet weak var iVPictureHeight: NSLayoutConstraint!
     
+    let defaultPictureHeight: CGFloat = 100
+    var delegate: PostCellDelegate?
     var post: Post?
     
     override func awakeFromNib() {
@@ -32,21 +35,41 @@ class PostTableViewCell: UITableViewCell {
 
     func configureLayout() {
         self.vContainer.applyCustomShadowEffectToView()
+        self.tFComment.applyBorderToView()
     }
     
     func configureData() {
         if let currentPost = self.post {
             self.lblTitle.text = currentPost.title
             if let imageName = currentPost.image {
-                self.iVPicture.image = UIImage(named: imageName)
-            }
-            if let postComments = currentPost.comments {
-                for postComment in postComments {
-                    let commentLabel = UILabel()
-                    commentLabel.text = postComment
-                    self.vStackComments.addSubview(commentLabel)
+                if let picture = UIImage(named: imageName) {
+                    self.iVPicture.image = UIImage(named: imageName)
+                    self.iVPictureHeight.constant = defaultPictureHeight
+                } else {
+                    self.hidePicture()
                 }
+            } else {
+                hidePicture()
+            }
+            for postComment in currentPost.comments {
+                let commentLabel = UILabel()
+                commentLabel.text = postComment
+                self.vStackComments.addSubview(commentLabel)
             }
         }
+    }
+    
+    @IBAction func onBtnCommentPressed(_ sender: Any) {
+        if let postComment = self.tFComment.text, !postComment.isEmpty {
+            let commentLabel = UILabel()
+            commentLabel.text = postComment
+            self.vStackComments.addSubview(commentLabel)
+            self.post?.comments.append(postComment)
+            self.delegate?.onBtnCommentPressed()
+        }
+    }
+    
+    func hidePicture() {
+        self.iVPictureHeight.constant = 0.0
     }
 }

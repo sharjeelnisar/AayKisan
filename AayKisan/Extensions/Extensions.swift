@@ -19,7 +19,7 @@ extension UIView {
     
     func applyBorderToView() {
         self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor(named: "color_line")?.cgColor
+        self.layer.borderColor = UIColor(named: "color_shadow")?.cgColor
     }
 }
 extension UITextField {

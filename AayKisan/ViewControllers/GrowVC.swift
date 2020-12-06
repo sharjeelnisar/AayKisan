@@ -23,7 +23,8 @@ class GrowVC: UIViewController {
     }
     
     func configureLayout() {
-        
+        self.tblVPosts.dataSource = self
+        self.tblVPosts.delegate = self
     }
     
     func configureData() {
@@ -52,17 +53,21 @@ extension GrowVC: UITableViewDataSource {
         
         let post = self.posts[indexPath.row]
         cell.post = post
-        //cell.delegate = self
+        cell.delegate = self
         cell.configureLayout()
         cell.configureData()
         return cell
     }
-    
-    
 }
 
 extension GrowVC: UITableViewDelegate {
     
+}
+
+extension GrowVC: PostCellDelegate {
+    func onBtnCommentPressed() {
+        
+    }
 }
 
 extension GrowVC: NetworkStatusListener {
