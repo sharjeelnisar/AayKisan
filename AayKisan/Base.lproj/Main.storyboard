@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--BuyVC-->
+        <!--Buy-->
         <scene sceneID="zlu-DO-PIU">
             <objects>
                 <viewController id="MQb-vj-LMx" customClass="BuyVC" customModule="AayKisan" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,13 +20,13 @@
                         <viewLayoutGuide key="safeArea" id="Ep4-kt-CXx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2qw-6l-Jxi"/>
+                    <navigationItem key="navigationItem" title="Buy" id="2qw-6l-Jxi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5K8-Eu-Yby" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1458" y="29"/>
         </scene>
-        <!--SellVC-->
+        <!--Sell-->
         <scene sceneID="IgJ-U9-xMj">
             <objects>
                 <viewController id="oCD-dQ-BSs" customClass="SellVC" customModule="AayKisan" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,13 +36,13 @@
                         <viewLayoutGuide key="safeArea" id="MWo-zI-vl7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HSJ-6x-eut"/>
+                    <navigationItem key="navigationItem" title="Sell" id="HSJ-6x-eut"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOP-hY-tAl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-729" y="30"/>
         </scene>
-        <!--MoreVC-->
+        <!--More-->
         <scene sceneID="QjK-D7-WnA">
             <objects>
                 <viewController id="ZsF-AI-YL3" customClass="MoreVC" customModule="AayKisan" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,13 +52,13 @@
                         <viewLayoutGuide key="safeArea" id="28w-0l-yfh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BO8-4y-ktG"/>
+                    <navigationItem key="navigationItem" title="More" id="BO8-4y-ktG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rxq-cB-HBc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2" y="24"/>
         </scene>
-        <!--GrowVC-->
+        <!--Grow-->
         <scene sceneID="R62-a3-z0h">
             <objects>
                 <viewController id="YbP-bg-plz" customClass="GrowVC" customModule="AayKisan" customModuleProvider="target" sceneMemberID="viewController">
@@ -192,7 +192,14 @@
                             <constraint firstItem="fiX-ZH-zx5" firstAttribute="bottom" secondItem="f5q-km-dpr" secondAttribute="bottom" id="wYr-IQ-zsR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Gbg-9w-z2u"/>
+                    <navigationItem key="navigationItem" title="Grow" id="Gbg-9w-z2u">
+                        <barButtonItem key="rightBarButtonItem" image="phone.fill" catalog="system" id="aIc-8u-WyA">
+                            <color key="tintColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="onBtnCallPressed:" destination="YbP-bg-plz" id="4Zh-Qn-oqf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tblVPosts" destination="jiL-9O-br0" id="DqT-Zj-UsO"/>
                     </connections>
@@ -245,7 +252,7 @@
         <scene sceneID="2zR-b5-D2h">
             <objects>
                 <navigationController id="e8V-ze-EOn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sell" image="applelogo" catalog="system" id="1hq-f6-YI3"/>
+                    <tabBarItem key="tabBarItem" title="Sell" image="sell" id="1hq-f6-YI3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G25-B6-p14">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -258,27 +265,26 @@
             </objects>
             <point key="canvasLocation" x="-684" y="-676"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="8Xr-h4-ZSM">
+        <!--MenuVC-->
+        <scene sceneID="8YI-qU-cTp">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="XYw-VD-7nj" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TFn-JI-N4h">
+                <viewController id="UBR-8e-J0U" customClass="MenuVC" customModule="AayKisan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7tE-is-aOo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="jAd-GZ-tq7"/>
+                        <viewLayoutGuide key="safeArea" id="a4B-5w-Ouo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="grP-dw-BjG"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="38b-4h-Nu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JAe-CK-p51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486.95652173913049" y="-1473.2142857142856"/>
+            <point key="canvasLocation" x="1210" y="-1481"/>
         </scene>
         <!--oh-->
         <scene sceneID="6JE-A4-6xO">
             <objects>
                 <navigationController title="oh" id="zTB-9v-VQl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" image="cursorarrow.click" catalog="system" id="Skn-Mu-IQl"/>
+                    <tabBarItem key="tabBarItem" title="More" image="more" id="Skn-Mu-IQl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EUJ-F0-mmn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -295,7 +301,7 @@
         <scene sceneID="Hf2-i0-ngt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bjM-gd-Nis" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Buy" id="tlH-mB-gTJ"/>
+                    <tabBarItem key="tabBarItem" title="Buy" image="buy" id="tlH-mB-gTJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2pv-iQ-Txw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -310,34 +316,17 @@
             </objects>
             <point key="canvasLocation" x="-1457" y="-676"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="fak-in-7AC">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="pageSheet" id="gwt-xa-aqv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="IwA-h5-1Rp"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ca1-ni-FKm">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="XYw-VD-7nj" kind="relationship" relationship="rootViewController" id="u4v-ZS-d3T"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MbN-MR-CmT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-423.1884057971015" y="-1473.2142857142856"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="applelogo" catalog="system" width="103" height="128"/>
-        <image name="cursorarrow.click" catalog="system" width="128" height="124"/>
+        <image name="buy" width="24" height="24"/>
         <image name="grow_filled" width="24" height="24"/>
+        <image name="more" width="24" height="24"/>
         <image name="morning_glory" width="129.5" height="97"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <image name="sell" width="24" height="24"/>
         <image name="send" width="24" height="24"/>
         <namedColor name="AccentColor">
-            <color red="0.96078431372549022" green="0.36862745098039218" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96100002527236938" green="0.36899998784065247" blue="0.38400000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

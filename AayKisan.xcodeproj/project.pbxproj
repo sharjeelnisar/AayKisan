@@ -26,6 +26,7 @@
 		EEA51C99257BB08900A6689B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA51C98257BB08900A6689B /* Post.swift */; };
 		EEA51C9F257BB2B500A6689B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA51C9E257BB2B500A6689B /* DataManager.swift */; };
 		EEA51CAD257BCB9400A6689B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA51CAC257BCB9400A6689B /* Extensions.swift */; };
+		EEB9BE55257E34D700A383AA /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9BE54257E34D700A383AA /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		EEA51C98257BB08900A6689B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		EEA51C9E257BB2B500A6689B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		EEA51CAC257BCB9400A6689B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EEB9BE54257E34D700A383AA /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				EEA51C28257B99B500A6689B /* SceneDelegate.swift */,
 				EEA51C65257BAA2100A6689B /* CustomViews */,
 				EEA51C9D257BB29B00A6689B /* DataManager */,
+				EEB9BE53257E34B300A383AA /* Enums */,
 				EEA51CAB257BCB8000A6689B /* Extensions */,
 				EEA51C64257BAA1600A6689B /* Models */,
 				EEA51C5C257BA9A300A6689B /* Network */,
@@ -215,6 +218,14 @@
 				EEA51CAC257BCB9400A6689B /* Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EEB9BE53257E34B300A383AA /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				EEB9BE54257E34D700A383AA /* Enums.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +363,7 @@
 				EEA51C82257BAD1C00A6689B /* GrowVC.swift in Sources */,
 				EEA51C31257B99B500A6689B /* AayKisan.xcdatamodeld in Sources */,
 				EE67F422257CDB82006C7E1C /* PostCellDelegate.swift in Sources */,
+				EEB9BE55257E34D700A383AA /* Enums.swift in Sources */,
 				EEA51C91257BAD7600A6689B /* MoreVC.swift in Sources */,
 				EEA51C9F257BB2B500A6689B /* DataManager.swift in Sources */,
 				EE67F419257CA6A4006C7E1C /* PostTableViewCell.swift in Sources */,

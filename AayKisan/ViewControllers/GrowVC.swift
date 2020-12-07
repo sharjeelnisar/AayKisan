@@ -31,6 +31,89 @@ class GrowVC: UIViewController {
         self.posts.append(contentsOf: DataManager.mockPosts)
     }
 
+    func presentOptions() {
+        
+    }
+    
+    func callHelpline() {
+        if let url = URL(string: HelpLineNumbers.AgricultureDepartment.rawValue), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    @IBAction func onBtnCallPressed(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: nil, message: "", preferredStyle: .actionSheet)
+
+        let urdu = UIAlertAction(title: HelpLanguage.Urdu.rawValue, style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            self.callHelpline()
+        })
+
+        let pothohari = UIAlertAction(title: HelpLanguage.Pothohari.rawValue, style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            self.callHelpline()
+        })
+        
+        let punjabi = UIAlertAction(title: HelpLanguage.Punjabi.rawValue, style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            self.callHelpline()
+        })
+        
+        let sindhi = UIAlertAction(title: HelpLanguage.Sindhi.rawValue, style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            self.callHelpline()
+        })
+        
+        let balochi = UIAlertAction(title: HelpLanguage.Balochi.rawValue, style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            self.callHelpline()
+        })
+        
+        let pashto = UIAlertAction(title: HelpLanguage.Pashto.rawValue, style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            self.callHelpline()
+        })
+        
+        let kashmiri = UIAlertAction(title: HelpLanguage.Kashmiri.rawValue, style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            self.callHelpline()
+        })
+        
+        let balti = UIAlertAction(title: HelpLanguage.Balti.rawValue, style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            self.callHelpline()
+        })
+        
+        let sariki = UIAlertAction(title: HelpLanguage.Sariki.rawValue, style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            self.callHelpline()
+        })
+        
+        let hindko = UIAlertAction(title: HelpLanguage.Hindko.rawValue, style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            self.callHelpline()
+        })
+        
+        let brahvi = UIAlertAction(title: HelpLanguage.Brahvi.rawValue, style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            self.callHelpline()
+        })
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        {   (result : UIAlertAction) -> Void in
+            alertController.dismiss(animated: true, completion: nil)
+        }
+        
+        
+        alertController.addAction(urdu)
+        alertController.addAction(pothohari)
+        alertController.addAction(punjabi)
+        alertController.addAction(sindhi)
+        alertController.addAction(balochi)
+        alertController.addAction(pashto)
+        alertController.addAction(kashmiri)
+        alertController.addAction(balti)
+        alertController.addAction(sariki)
+        alertController.addAction(hindko)
+        alertController.addAction(brahvi)
+        alertController.addAction(cancel)
+        
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.backgroundColor = .white
+            popoverController.barButtonItem = sender
+        }
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
