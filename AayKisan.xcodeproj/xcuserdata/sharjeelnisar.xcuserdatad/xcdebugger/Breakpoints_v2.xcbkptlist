@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "66AF2E63-C9AC-4EFD-B648-9F0A2CDB8851"
-            shouldBeEnabled = "Yes"
+            uuid = "0D2FA150-8583-4007-AACE-C45D52E9513A"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AayKisan/CustomViews/PostTableViewCell.swift"
+            filePath = "AayKisan/ViewControllers/ProductsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "configureData()"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "tableView(_:didDeselectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

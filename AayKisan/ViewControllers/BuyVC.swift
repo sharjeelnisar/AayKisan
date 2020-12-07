@@ -9,7 +9,13 @@ import UIKit
 
 class BuyVC: UIViewController {
 
+    @IBOutlet weak var vContainer: UIView!
+    @IBOutlet weak var tblViewCategories: UITableView!
+    
+    let cellReuseIdentifier = "CategoryTableViewCell"
     var isNetworkAvailable = true
+    var categories = [ProductCategory]()
+    var selectedCategory: ProductCategory?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,24 +25,49 @@ class BuyVC: UIViewController {
     }
     
     func configureLayout() {
-        
+        self.tblViewCategories.dataSource = self
+        self.tblViewCategories.delegate = self
     }
     
     func configureData() {
-        
+        self.categories.append(contentsOf: DataManager.mockCategories)
     }
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == Segues.CategoryToProducts.rawValue) {
+            if let destinationVC = segue.destination as? ProductsVC {
+                destinationVC.currentCategory = self.selectedCategory
+            }
+        }
     }
-    */
 
 }
+
+extension BuyVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:CategoryTableViewCell = self.tblViewCategories.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! CategoryTableViewCell
+        let category = self.categories[indexPath.row]
+        cell.category = category
+        cell.configureLayout()
+        cell.configureData()
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.categories.count
+    }
+}
+
+extension BuyVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        self.selectedCategory = categories[indexPath.row]
+        self.performSegue(withIdentifier: Segues.CategoryToProducts.rawValue, sender: self)
+    }
+}
+
 extension BuyVC: NetworkStatusListener {
     func networkStatusDidChange(status: Reachability.NetworkStatus) {
         switch status {

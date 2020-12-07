@@ -136,6 +136,7 @@ extension GrowVC: UITableViewDataSource {
         
         let post = self.posts[indexPath.row]
         cell.post = post
+        cell.currentIndexPath = indexPath
         cell.delegate = self
         cell.configureLayout()
         cell.configureData()
@@ -148,8 +149,9 @@ extension GrowVC: UITableViewDelegate {
 }
 
 extension GrowVC: PostCellDelegate {
-    func onBtnCommentPressed() {
-        
+    func onBtnCommentPressed(indexPath: IndexPath, comment: String) {
+        self.posts[indexPath.row].comments.append(comment)
+        self.tblVPosts.reloadRows(at: [indexPath], with: .automatic)
     }
 }
 

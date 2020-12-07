@@ -20,16 +20,73 @@ class DataManager {
     Post(title: "Petunia in my beautiful lawn", image: "petunia")
         ]
     
-  static let mockProducts = [
-    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
-    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
-    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
-    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
-    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
-    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
-    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
-    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
-    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
-    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "")
+  static let mockCategories = [
+    ProductCategory(id: UUID(), name: "Vegetables"),
+    ProductCategory(id: UUID(), name: "Fruits"),
+    ProductCategory(id: UUID(), name: "Dairy Products"),
+    ProductCategory(id: UUID(), name: "Seeds"),
+    ProductCategory(id: UUID(), name: "Gardening Equipment")
+  ]
+    
+  static let vegetables = [
+    Product(id: UUID(), name: "Cherry Tomato", unit: "Kg", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "Premium quality cherry tomatoes, grown at my home. Purely organic and fresh.", address: "876-XX Block, DHA, Lahore"),
+    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: "")
     ]
+    
+    static let fruits = [
+      Product(id: UUID(), name: "JackFruit", unit: "Kg", quantity: 1.0, isVerified: true, grade: .A, rating: 0.0, description: "Home grown, export quality. Fresh, healthy fruit.", address: "76-C, Model Town, Lahore"),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: "")
+      ]
+    
+    static let dairyProducts = [
+      Product(id: UUID(), name: "Pure Home made Butter", unit: "Kg", quantity: 1.0, isVerified: false, grade: .B, rating: 3.0, description: "We prepare pure food for you. Khalis Desi Ghee.", address: "34/7 Shah Kot, G.T Road, Sheikhupura"),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: "")
+      ]
+    
+    static let seeds = [
+      Product(id: UUID(), name: "Tomato Seeds - Desi", unit: "Seed", quantity: 100.0, isVerified: true, grade: .A, rating: 5.0, description: "A one quality pure seeds, prepared in our own farms.", address: "876-A, Khayaban Siddique, Khairpur"),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: "")
+      ]
+    
+    static let gardeningEquipment = [
+      Product(id: UUID(), name: "Grow Bags", unit: "Count", quantity: 1.0, isVerified: true, grade: .A, rating: 5.0, description: "Grow bags, made by jeans, to grow vegetables in your balcony or roof top.", address: "68-C, Shaheed-e-Millat Road, Karachi"),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: ""),
+      Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "", address: "")
+      ]
+    
+    static func getProductsOf(category: String) -> [Product] {
+        switch category {
+        case "Vegetables":
+            return DataManager.vegetables
+        case "Fruits":
+            return DataManager.fruits
+        case "Dairy Products":
+            return DataManager.dairyProducts
+        case "Seeds":
+            return DataManager.seeds
+        case "Gardening Equipment":
+            return DataManager.gardeningEquipment
+        default:
+            return [Product]()
+        }
+    }
 }

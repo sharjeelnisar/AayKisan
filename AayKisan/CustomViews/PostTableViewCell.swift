@@ -21,6 +21,7 @@ class PostTableViewCell: UITableViewCell {
     let defaultPictureHeight: CGFloat = 100
     var delegate: PostCellDelegate?
     var post: Post?
+    var currentIndexPath: IndexPath?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -61,11 +62,7 @@ class PostTableViewCell: UITableViewCell {
     
     @IBAction func onBtnCommentPressed(_ sender: Any) {
         if let postComment = self.tFComment.text, !postComment.isEmpty {
-            let commentLabel = UILabel()
-            commentLabel.text = postComment
-            self.vStackComments.addSubview(commentLabel)
-            self.post?.comments.append(postComment)
-            self.delegate?.onBtnCommentPressed()
+            self.delegate?.onBtnCommentPressed(indexPath: self.currentIndexPath!, comment: postComment)
         }
     }
     
