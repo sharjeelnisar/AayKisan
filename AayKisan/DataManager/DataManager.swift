@@ -20,4 +20,16 @@ class DataManager {
     Post(title: "Petunia in my beautiful lawn", image: "petunia")
         ]
     
+  static let mockProducts = [
+    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
+    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
+    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
+    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
+    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
+    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
+    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
+    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
+    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: ""),
+    Product(id: UUID(), name: "", unit: "", quantity: 1.0, isVerified: true, grade: .A, rating: 4.0, description: "")
+    ]
 }

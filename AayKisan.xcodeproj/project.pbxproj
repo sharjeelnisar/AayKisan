@@ -27,6 +27,7 @@
 		EEA51C9F257BB2B500A6689B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA51C9E257BB2B500A6689B /* DataManager.swift */; };
 		EEA51CAD257BCB9400A6689B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA51CAC257BCB9400A6689B /* Extensions.swift */; };
 		EEB9BE55257E34D700A383AA /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9BE54257E34D700A383AA /* Enums.swift */; };
+		EEB9BE60257E4BD300A383AA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9BE5F257E4BD300A383AA /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		EEA51C9E257BB2B500A6689B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		EEA51CAC257BCB9400A6689B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EEB9BE54257E34D700A383AA /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		EEB9BE5F257E4BD300A383AA /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				EEA51C98257BB08900A6689B /* Post.swift */,
+				EEB9BE5F257E4BD300A383AA /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				EEA51C91257BAD7600A6689B /* MoreVC.swift in Sources */,
 				EEA51C9F257BB2B500A6689B /* DataManager.swift in Sources */,
 				EE67F419257CA6A4006C7E1C /* PostTableViewCell.swift in Sources */,
+				EEB9BE60257E4BD300A383AA /* Product.swift in Sources */,
 				EEA51C5F257BA9EC00A6689B /* Reachability.swift in Sources */,
 				EEA51CAD257BCB9400A6689B /* Extensions.swift in Sources */,
 				EEA51C60257BA9EC00A6689B /* ReachabilityManager.swift in Sources */,

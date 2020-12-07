@@ -28,3 +28,9 @@ enum HelpLanguage: String {
     case Hindko
     case Brahvi
 }
+
+enum ProductGrade: String {
+    case A
+    case B
+    case C
+}
