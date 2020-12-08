@@ -8,7 +8,7 @@ import Foundation
 
 class DataManager {
    static let mockPosts = [
-    Post(title: "Morning glory", image: "morning_glory"),
+    Post(title: "Morning glory", image: "morning_glory", comments: ["Wow", "Beautiful"]),
     Post(title: "Please guide me from where I can get good seeds?", image: nil),
     Post(title: "My Cherry Tomatoes", image: "cherry_tomato"),
     Post(title: "Aloe Vera in my garden", image: "aloe_vera"),
