@@ -18,4 +18,5 @@ struct Product: Identifiable {
     var rating: Float
     var description: String
     var address: String
+    var image: String
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE608EEB257F7202008EE9C8 /* DemandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE608EEA257F7202008EE9C8 /* DemandVC.swift */; };
 		EE67F419257CA6A4006C7E1C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE67F418257CA6A4006C7E1C /* PostTableViewCell.swift */; };
 		EE67F422257CDB82006C7E1C /* PostCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE67F421257CDB82006C7E1C /* PostCellDelegate.swift */; };
 		EEA51C27257B99B500A6689B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA51C26257B99B500A6689B /* AppDelegate.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE608EEA257F7202008EE9C8 /* DemandVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemandVC.swift; sourceTree = "<group>"; };
 		EE67F418257CA6A4006C7E1C /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		EE67F421257CDB82006C7E1C /* PostCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellDelegate.swift; sourceTree = "<group>"; };
 		EEA51C23257B99B500A6689B /* AayKisan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AayKisan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +220,7 @@
 				EEA51C90257BAD7600A6689B /* MoreVC.swift */,
 				EEB9BE6E257E8DC800A383AA /* ProductsVC.swift */,
 				EEB9BE81257EA95700A383AA /* ProductDetailVC.swift */,
+				EE608EEA257F7202008EE9C8 /* DemandVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				EEA51C31257B99B500A6689B /* AayKisan.xcdatamodeld in Sources */,
 				EE67F422257CDB82006C7E1C /* PostCellDelegate.swift in Sources */,
 				EEB9BE55257E34D700A383AA /* Enums.swift in Sources */,
+				EE608EEB257F7202008EE9C8 /* DemandVC.swift in Sources */,
 				EEA51C91257BAD7600A6689B /* MoreVC.swift in Sources */,
 				EEA51C9F257BB2B500A6689B /* DataManager.swift in Sources */,
 				EEB9BE6F257E8DC800A383AA /* ProductsVC.swift in Sources */,
