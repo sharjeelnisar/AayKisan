@@ -28,6 +28,7 @@ class BuyVC: UIViewController {
     }
     
     func configureLayout() {
+        self.vDemand.applyCustomShadowEffectToView()
         self.tblViewCategories.dataSource = self
         self.tblViewCategories.delegate = self
     }
@@ -47,6 +48,7 @@ class BuyVC: UIViewController {
         }
     }
     @IBAction func onBtnDemandPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: Segues.BuyToDemand.rawValue, sender: self)
     }
     
 }

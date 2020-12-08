@@ -9,6 +9,14 @@ import UIKit
 
 class DemandVC: UIViewController {
 
+    @IBOutlet weak var vContainer: UIView!
+    @IBOutlet weak var lblPrompt: UILabel!
+    @IBOutlet weak var pVGrade: UITextField!
+    @IBOutlet weak var pVQuantity: QuickPickerView!
+    @IBOutlet weak var pVUnit: QuickPickerView!
+    @IBOutlet weak var pVProductName: QuickPickerView!
+    @IBOutlet weak var tVNotes: UITextView!
+    
     var isNetworkAvailable = true
     
     override func viewDidLoad() {
@@ -19,13 +27,23 @@ class DemandVC: UIViewController {
     }
     
     func configureLayout() {
-        
+        self.pVGrade.applyBorderToView()
+        self.pVQuantity.applyBorderToView()
+        self.pVUnit.applyBorderToView()
+        self.pVProductName.applyBorderToView()
+        self.tVNotes.applyBorderToView()
     }
     
     func configureData() {
         
     }
 
+    func resetData() {
+        self.pVProductName.text = PlaceHolders.emptyString.rawValue
+        self.pVGrade.text = PlaceHolders.emptyString.rawValue
+        self.pVQuantity.text = PlaceHolders.emptyString.rawValue
+        self.pVUnit.text = PlaceHolders.emptyString.rawValue
+    }
     /*
     // MARK: - Navigation
 
@@ -35,7 +53,15 @@ class DemandVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func onBtnCancelPressed(_ sender: Any) {
+        self.resetData()
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func onBtnSubmitPressed(_ sender: Any) {
+        self.resetData()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 extension DemandVC: NetworkStatusListener {
     func networkStatusDidChange(status: Reachability.NetworkStatus) {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EE608EEB257F7202008EE9C8 /* DemandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE608EEA257F7202008EE9C8 /* DemandVC.swift */; };
+		EE608EF6257F797B008EE9C8 /* QuickPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE608EF5257F797B008EE9C8 /* QuickPickerView.swift */; };
 		EE67F419257CA6A4006C7E1C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE67F418257CA6A4006C7E1C /* PostTableViewCell.swift */; };
 		EE67F422257CDB82006C7E1C /* PostCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE67F421257CDB82006C7E1C /* PostCellDelegate.swift */; };
 		EEA51C27257B99B500A6689B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA51C26257B99B500A6689B /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		EE608EEA257F7202008EE9C8 /* DemandVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemandVC.swift; sourceTree = "<group>"; };
+		EE608EF5257F797B008EE9C8 /* QuickPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickPickerView.swift; sourceTree = "<group>"; };
 		EE67F418257CA6A4006C7E1C /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		EE67F421257CDB82006C7E1C /* PostCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellDelegate.swift; sourceTree = "<group>"; };
 		EEA51C23257B99B500A6689B /* AayKisan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AayKisan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +209,7 @@
 				EE67F418257CA6A4006C7E1C /* PostTableViewCell.swift */,
 				EEB9BE64257E7C1C00A383AA /* CategoryTableViewCell.swift */,
 				EEB9BE73257E8EAE00A383AA /* ProductsTableViewCell.swift */,
+				EE608EF5257F797B008EE9C8 /* QuickPickerView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				EEA51C29257B99B500A6689B /* SceneDelegate.swift in Sources */,
 				EEA51C99257BB08900A6689B /* Post.swift in Sources */,
 				EEB9BE65257E7C1C00A383AA /* CategoryTableViewCell.swift in Sources */,
+				EE608EF6257F797B008EE9C8 /* QuickPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
