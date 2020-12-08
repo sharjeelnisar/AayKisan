@@ -8,5 +8,5 @@
 import Foundation
 
 protocol PostCellDelegate {
-    func onBtnCommentPressed()
+    func onBtnCommentPressed(indexPath: IndexPath, comment: String)
 }

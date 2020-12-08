@@ -9,6 +9,8 @@ import Foundation
 
 enum Segues: String {
     case HelpToMenuSegue = "segue_help_menu"
+    case CategoryToProducts = "segue_category_product"
+    case ProductToProductDetail = "segue_product_detail"
 }
 
 enum HelpLineNumbers: String {
@@ -27,4 +29,10 @@ enum HelpLanguage: String {
     case Sariki
     case Hindko
     case Brahvi
+}
+
+enum ProductGrade: String {
+    case A
+    case B
+    case C
 }
