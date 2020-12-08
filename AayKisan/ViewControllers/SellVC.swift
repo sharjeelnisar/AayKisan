@@ -9,6 +9,13 @@ import UIKit
 
 class SellVC: UIViewController {
 
+    @IBOutlet weak var vDemands: UIView!
+    @IBOutlet weak var vOrders: UIView!
+    @IBOutlet weak var vProducts: UIView!
+    @IBOutlet weak var btnDemands: UIButton!
+    @IBOutlet weak var btnOrders: UIButton!
+    @IBOutlet weak var btnProducts: UIButton!
+    
     var isNetworkAvailable = true
     
     override func viewDidLoad() {
@@ -19,23 +26,36 @@ class SellVC: UIViewController {
     }
     
     func configureLayout() {
-        
+        self.vDemands.applyCustomShadowEffectToView()
+        self.vOrders.applyCustomShadowEffectToView()
+        self.vProducts.applyCustomShadowEffectToView()
     }
     
     func configureData() {
         
     }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == Segues.SellToProducts.rawValue) {
+            if let destinationVC = segue.destination as? ProductsVC {
+                destinationVC.currentCategory = DataManager.mockCategories[0]
+            }
+        }
     }
-    */
 
+    @IBAction func onBtnDemandsPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: Segues.SellToProducts.rawValue, sender: self)
+    }
+    
+    @IBAction func onBtnOrdersPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: Segues.SellToOrders.rawValue, sender: self)
+    }
+    @IBAction func onBtnProductsPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: Segues.SellToDemands.rawValue, sender: self)
+    }
+    
 }
 extension SellVC: NetworkStatusListener {
     func networkStatusDidChange(status: Reachability.NetworkStatus) {

@@ -151,7 +151,7 @@ extension GrowVC: UITableViewDelegate {
 extension GrowVC: PostCellDelegate {
     func onBtnCommentPressed(indexPath: IndexPath, comment: String) {
         self.posts[indexPath.row].comments.append(comment)
-        self.tblVPosts.reloadRows(at: [indexPath], with: .automatic)
+        self.tblVPosts.reloadData()
     }
 }
 

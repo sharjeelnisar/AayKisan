@@ -1,23 +1,22 @@
 //
-//  MoreVC.swift
+//  DemandsVC.swift
 //  AayKisan
 //
-//  Created by Sharjeel Nisar on 05/12/2020.
+//  Created by Sharjeel Nisar on 08/12/2020.
 //
 
 import UIKit
 
-class MoreVC: UIViewController {
+class DemandsVC: UIViewController {
 
-    @IBOutlet weak var vContainer: UIView!
-    @IBOutlet weak var vProfile: UIView!
-    @IBOutlet weak var vSettings: UIView!
-    @IBOutlet weak var vTutorials: UIView!
-    @IBOutlet weak var vAboutUs: UIView!
-    @IBOutlet weak var vPrivacyPolicy: UIView!
-    @IBOutlet weak var vTermsOfService: UIView!
     
+    @IBOutlet weak var sBDemands: UISearchBar!
+    @IBOutlet weak var vContainer: UIView!
+    @IBOutlet weak var tblViewDemands: UITableView!
+    
+    let cellReuseIdentifier = "DemandTableViewCell"
     var isNetworkAvailable = true
+    var demands = [Demand]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +26,12 @@ class MoreVC: UIViewController {
     }
     
     func configureLayout() {
-        self.vProfile.applyCustomShadowEffectToView()
-        self.vSettings.applyCustomShadowEffectToView()
-        self.vTutorials.applyCustomShadowEffectToView()
-        self.vAboutUs.applyCustomShadowEffectToView()
-        self.vPrivacyPolicy.applyCustomShadowEffectToView()
-        self.vTermsOfService.applyCustomShadowEffectToView()
+        self.tblViewDemands.dataSource = self
+        self.tblViewDemands.delegate = self
     }
     
     func configureData() {
-        
+        self.demands.append(contentsOf: DataManager.demands)
     }
 
     /*
@@ -50,7 +45,27 @@ class MoreVC: UIViewController {
     */
 
 }
-extension MoreVC: NetworkStatusListener {
+
+extension DemandsVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:DemandTableViewCell = self.tblViewDemands.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! DemandTableViewCell
+        let demand = self.demands[indexPath.row]
+        cell.currentDemand = demand
+        cell.configureLayout()
+        cell.configureData()
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.demands.count
+    }
+}
+
+extension DemandsVC: UITableViewDelegate {
+    
+}
+
+extension DemandsVC: NetworkStatusListener {
     func networkStatusDidChange(status: Reachability.NetworkStatus) {
         switch status {
         case .notReachable:
