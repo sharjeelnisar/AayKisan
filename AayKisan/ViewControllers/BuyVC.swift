@@ -10,6 +10,9 @@ import UIKit
 class BuyVC: UIViewController {
 
     @IBOutlet weak var vContainer: UIView!
+    @IBOutlet weak var vDemand: UIView!
+    @IBOutlet weak var btnDemand: UIButton!
+    
     @IBOutlet weak var tblViewCategories: UITableView!
     
     let cellReuseIdentifier = "CategoryTableViewCell"
@@ -43,7 +46,9 @@ class BuyVC: UIViewController {
             }
         }
     }
-
+    @IBAction func onBtnDemandPressed(_ sender: Any) {
+    }
+    
 }
 
 extension BuyVC: UITableViewDataSource {

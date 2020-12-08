@@ -8,15 +8,49 @@
 import UIKit
 
 class ProductDetailVC: UIViewController {
-
+    
+    @IBOutlet weak var vContainer: UIView!
+    @IBOutlet weak var iVCover: UIImageView!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var iVVerified: UIImageView!
+    @IBOutlet weak var lblGrade: UILabel!
+    @IBOutlet weak var lblRating: UILabel!
+    @IBOutlet weak var lblUnit: UILabel!
+    @IBOutlet weak var lblQuantity: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    
+    var isNetworkAvailable = true
     var currentProduct: Product?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.configureLayout()
+        self.configureData()
     }
     
+    func configureLayout() {
+        self.vContainer.applyCustomShadowEffectToView()
+    }
+    
+    func configureData() {
+        if let product = currentProduct {
+            if let coverImage = UIImage(named: product.image) {
+                self.iVCover.image = coverImage
+            }
+            if product.isVerified {
+                self.iVVerified.isHidden = false
+            } else {
+                self.iVVerified.isHidden = true
+            }
+            self.lblName.text = product.name
+            self.lblGrade.text = product.grade.rawValue
+            self.lblRating.text = "\(product.rating)"
+            self.lblUnit.text = product.unit
+            self.lblQuantity.text = "\(product.quantity)"
+            self.lblDescription.text = product.description
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -28,4 +62,22 @@ class ProductDetailVC: UIViewController {
     }
     */
 
+}
+extension ProductDetailVC: NetworkStatusListener {
+    func networkStatusDidChange(status: Reachability.NetworkStatus) {
+        switch status {
+        case .notReachable:
+            DispatchQueue.main.async {
+                self.isNetworkAvailable = false
+            }
+        case .reachableViaWiFi:
+            DispatchQueue.main.async {
+                self.isNetworkAvailable = true
+            }
+        case .reachableViaWWAN:
+            DispatchQueue.main.async {
+                self.isNetworkAvailable = true
+            }
+        }
+    }
 }
