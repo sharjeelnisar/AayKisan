@@ -18,6 +18,7 @@ class ProductDetailVC: UIViewController {
     @IBOutlet weak var lblUnit: UILabel!
     @IBOutlet weak var lblQuantity: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var btnAddToCart: UIButton!
     
     var isNetworkAvailable = true
     var currentProduct: Product?
@@ -61,7 +62,10 @@ class ProductDetailVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func onBtnAddToCartPressed(_ sender: Any) {
+        
+    }
+    
 }
 extension ProductDetailVC: NetworkStatusListener {
     func networkStatusDidChange(status: Reachability.NetworkStatus) {

@@ -16,7 +16,6 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var vStackComments: UIStackView!
     @IBOutlet weak var tFComment: UITextField!
     @IBOutlet weak var btnComment: UIButton!
-    @IBOutlet weak var iVPictureHeight: NSLayoutConstraint!
     
     let defaultPictureHeight: CGFloat = 100
     var delegate: PostCellDelegate?
@@ -28,13 +27,8 @@ class PostTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
     func configureLayout() {
+        self.selectionStyle = .none
         self.vContainer.applyCustomShadowEffectToView()
         self.tFComment.applyBorderToView()
     }
@@ -44,13 +38,12 @@ class PostTableViewCell: UITableViewCell {
             self.lblTitle.text = currentPost.title
             if let imageName = currentPost.image {
                 if let picture = UIImage(named: imageName) {
-                    self.iVPicture.image = UIImage(named: imageName)
-                    self.iVPictureHeight.constant = defaultPictureHeight
-                } else {
-                    self.hidePicture()
+                    self.iVPicture.image = picture
                 }
             } else {
-                hidePicture()
+                if let picture = UIImage(named: "logo") {
+                    self.iVPicture.image = picture
+                }
             }
             for postComment in currentPost.comments {
                 let commentLabel = UILabel()
@@ -62,11 +55,8 @@ class PostTableViewCell: UITableViewCell {
     
     @IBAction func onBtnCommentPressed(_ sender: Any) {
         if let postComment = self.tFComment.text, !postComment.isEmpty {
+            self.tFComment.text = PlaceHolders.emptyString.rawValue
             self.delegate?.onBtnCommentPressed(indexPath: self.currentIndexPath!, comment: postComment)
         }
-    }
-    
-    func hidePicture() {
-        self.iVPictureHeight.constant = 0.0
     }
 }

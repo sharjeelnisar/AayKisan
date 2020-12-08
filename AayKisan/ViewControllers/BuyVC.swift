@@ -70,8 +70,10 @@ extension BuyVC: UITableViewDataSource {
 
 extension BuyVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        self.selectedCategory = categories[indexPath.row]
-        self.performSegue(withIdentifier: Segues.CategoryToProducts.rawValue, sender: self)
+        DispatchQueue.main.async {
+            self.selectedCategory = self.categories[indexPath.row]
+            self.performSegue(withIdentifier: Segues.CategoryToProducts.rawValue, sender: self)
+        }
     }
 }
 

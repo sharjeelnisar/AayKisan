@@ -1,23 +1,21 @@
 //
-//  MoreVC.swift
+//  OrdersVC.swift
 //  AayKisan
 //
-//  Created by Sharjeel Nisar on 05/12/2020.
+//  Created by Sharjeel Nisar on 08/12/2020.
 //
 
 import UIKit
 
-class MoreVC: UIViewController {
+class OrdersVC: UIViewController {
 
+    @IBOutlet weak var sBOrders: UISearchBar!
     @IBOutlet weak var vContainer: UIView!
-    @IBOutlet weak var vProfile: UIView!
-    @IBOutlet weak var vSettings: UIView!
-    @IBOutlet weak var vTutorials: UIView!
-    @IBOutlet weak var vAboutUs: UIView!
-    @IBOutlet weak var vPrivacyPolicy: UIView!
-    @IBOutlet weak var vTermsOfService: UIView!
+    @IBOutlet weak var tblViewOrders: UITableView!
     
+    let cellReuseIdentifier = "OrderTableViewCell"
     var isNetworkAvailable = true
+    var orders = [Order]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +25,12 @@ class MoreVC: UIViewController {
     }
     
     func configureLayout() {
-        self.vProfile.applyCustomShadowEffectToView()
-        self.vSettings.applyCustomShadowEffectToView()
-        self.vTutorials.applyCustomShadowEffectToView()
-        self.vAboutUs.applyCustomShadowEffectToView()
-        self.vPrivacyPolicy.applyCustomShadowEffectToView()
-        self.vTermsOfService.applyCustomShadowEffectToView()
+        self.tblViewOrders.dataSource = self
+        self.tblViewOrders.delegate = self
     }
     
     func configureData() {
-        
+        self.orders.append(contentsOf: DataManager.orders)
     }
 
     /*
@@ -50,7 +44,27 @@ class MoreVC: UIViewController {
     */
 
 }
-extension MoreVC: NetworkStatusListener {
+
+extension OrdersVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:OrderTableViewCell = self.tblViewOrders.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! OrderTableViewCell
+        let order = self.orders[indexPath.row]
+        cell.currentOrder = order
+        cell.configureLayout()
+        cell.configureData()
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.orders.count
+    }
+}
+
+extension OrdersVC: UITableViewDelegate {
+    
+}
+
+extension OrdersVC: NetworkStatusListener {
     func networkStatusDidChange(status: Reachability.NetworkStatus) {
         switch status {
         case .notReachable:

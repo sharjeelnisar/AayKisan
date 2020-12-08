@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		EE608EEB257F7202008EE9C8 /* DemandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE608EEA257F7202008EE9C8 /* DemandVC.swift */; };
 		EE608EF6257F797B008EE9C8 /* QuickPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE608EF5257F797B008EE9C8 /* QuickPickerView.swift */; };
+		EE608F04257FC415008EE9C8 /* OrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE608F03257FC415008EE9C8 /* OrdersVC.swift */; };
+		EE608F09257FC480008EE9C8 /* DemandsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE608F08257FC480008EE9C8 /* DemandsVC.swift */; };
+		EE608F0E257FDC20008EE9C8 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE608F0D257FDC20008EE9C8 /* Order.swift */; };
+		EE608F13257FDC98008EE9C8 /* Demand.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE608F12257FDC98008EE9C8 /* Demand.swift */; };
+		EE608F20257FDCDD008EE9C8 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE608F1F257FDCDD008EE9C8 /* OrderTableViewCell.swift */; };
+		EE608F25257FDCE8008EE9C8 /* DemandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE608F24257FDCE8008EE9C8 /* DemandTableViewCell.swift */; };
 		EE67F419257CA6A4006C7E1C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE67F418257CA6A4006C7E1C /* PostTableViewCell.swift */; };
 		EE67F422257CDB82006C7E1C /* PostCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE67F421257CDB82006C7E1C /* PostCellDelegate.swift */; };
 		EEA51C27257B99B500A6689B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA51C26257B99B500A6689B /* AppDelegate.swift */; };
@@ -57,6 +63,12 @@
 /* Begin PBXFileReference section */
 		EE608EEA257F7202008EE9C8 /* DemandVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemandVC.swift; sourceTree = "<group>"; };
 		EE608EF5257F797B008EE9C8 /* QuickPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickPickerView.swift; sourceTree = "<group>"; };
+		EE608F03257FC415008EE9C8 /* OrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersVC.swift; sourceTree = "<group>"; };
+		EE608F08257FC480008EE9C8 /* DemandsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemandsVC.swift; sourceTree = "<group>"; };
+		EE608F0D257FDC20008EE9C8 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		EE608F12257FDC98008EE9C8 /* Demand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demand.swift; sourceTree = "<group>"; };
+		EE608F1F257FDCDD008EE9C8 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		EE608F24257FDCE8008EE9C8 /* DemandTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemandTableViewCell.swift; sourceTree = "<group>"; };
 		EE67F418257CA6A4006C7E1C /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		EE67F421257CDB82006C7E1C /* PostCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellDelegate.swift; sourceTree = "<group>"; };
 		EEA51C23257B99B500A6689B /* AayKisan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AayKisan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +211,8 @@
 				EEA51C98257BB08900A6689B /* Post.swift */,
 				EEB9BE5F257E4BD300A383AA /* Product.swift */,
 				EEB9BE69257E838200A383AA /* ProductCategory.swift */,
+				EE608F0D257FDC20008EE9C8 /* Order.swift */,
+				EE608F12257FDC98008EE9C8 /* Demand.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +224,8 @@
 				EEB9BE64257E7C1C00A383AA /* CategoryTableViewCell.swift */,
 				EEB9BE73257E8EAE00A383AA /* ProductsTableViewCell.swift */,
 				EE608EF5257F797B008EE9C8 /* QuickPickerView.swift */,
+				EE608F1F257FDCDD008EE9C8 /* OrderTableViewCell.swift */,
+				EE608F24257FDCE8008EE9C8 /* DemandTableViewCell.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -224,6 +240,8 @@
 				EEB9BE6E257E8DC800A383AA /* ProductsVC.swift */,
 				EEB9BE81257EA95700A383AA /* ProductDetailVC.swift */,
 				EE608EEA257F7202008EE9C8 /* DemandVC.swift */,
+				EE608F03257FC415008EE9C8 /* OrdersVC.swift */,
+				EE608F08257FC480008EE9C8 /* DemandsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -383,13 +401,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEA51C8C257BAD6900A6689B /* SellVC.swift in Sources */,
+				EE608F04257FC415008EE9C8 /* OrdersVC.swift in Sources */,
 				EEB9BE74257E8EAE00A383AA /* ProductsTableViewCell.swift in Sources */,
 				EEA51C27257B99B500A6689B /* AppDelegate.swift in Sources */,
 				EEA51C82257BAD1C00A6689B /* GrowVC.swift in Sources */,
+				EE608F25257FDCE8008EE9C8 /* DemandTableViewCell.swift in Sources */,
 				EEA51C31257B99B500A6689B /* AayKisan.xcdatamodeld in Sources */,
 				EE67F422257CDB82006C7E1C /* PostCellDelegate.swift in Sources */,
+				EE608F13257FDC98008EE9C8 /* Demand.swift in Sources */,
+				EE608F09257FC480008EE9C8 /* DemandsVC.swift in Sources */,
 				EEB9BE55257E34D700A383AA /* Enums.swift in Sources */,
+				EE608F20257FDCDD008EE9C8 /* OrderTableViewCell.swift in Sources */,
 				EE608EEB257F7202008EE9C8 /* DemandVC.swift in Sources */,
+				EE608F0E257FDC20008EE9C8 /* Order.swift in Sources */,
 				EEA51C91257BAD7600A6689B /* MoreVC.swift in Sources */,
 				EEA51C9F257BB2B500A6689B /* DataManager.swift in Sources */,
 				EEB9BE6F257E8DC800A383AA /* ProductsVC.swift in Sources */,
