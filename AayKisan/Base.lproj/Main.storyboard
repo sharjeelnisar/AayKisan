@@ -284,9 +284,113 @@
                     <view key="view" contentMode="scaleToFill" id="Xle-Wx-dIa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebS-HF-wBT">
+                                <rect key="frame" x="20" y="0.0" width="374" height="808"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ns2-KE-Kul">
+                                        <rect key="frame" x="0.0" y="50" width="374" height="549"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please share your demand. Our best vendors will bid to fulfill your demand with best of their efforts." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YVT-o4-z6N">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="63"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L8p-pC-3Pr" customClass="QuickPickerView" customModule="AayKisan" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="83" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="lUA-i0-QnK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9q8-eT-7gL" customClass="QuickPickerView" customModule="AayKisan" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="153" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="KBu-03-d9t"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frT-jL-NkR" customClass="QuickPickerView" customModule="AayKisan" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="223" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="zWG-hn-whT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2dJ-iy-SnF">
+                                                <rect key="frame" x="0.0" y="293" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="GRC-QH-Qr9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dD4-wC-lqu">
+                                                <rect key="frame" x="0.0" y="363" width="374" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4q9-1u-nEw">
+                                                <rect key="frame" x="0.0" y="511" width="374" height="38"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yB-eb-k7w">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="38"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                        <state key="normal" title="Cancel">
+                                                            <color key="titleColor" name="AccentColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onBtnCancelPressed:" destination="9F4-nf-qEw" eventType="touchUpInside" id="c7q-bt-kyW"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBo-ow-vnU">
+                                                        <rect key="frame" x="187" y="0.0" width="187" height="38"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                        <state key="normal" title="Submit">
+                                                            <color key="titleColor" name="verified"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onBtnSubmitPressed:" destination="9F4-nf-qEw" eventType="touchUpInside" id="LCk-WP-9la"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ns2-KE-Kul" firstAttribute="leading" secondItem="ebS-HF-wBT" secondAttribute="leading" id="11t-VV-Xzc"/>
+                                    <constraint firstItem="ns2-KE-Kul" firstAttribute="top" secondItem="ebS-HF-wBT" secondAttribute="top" constant="50" id="886-hX-EAF"/>
+                                    <constraint firstAttribute="trailing" secondItem="ns2-KE-Kul" secondAttribute="trailing" id="SJ3-hr-ddV"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ns2-KE-Kul" secondAttribute="bottom" constant="10" id="Z1p-I8-Glw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="AdC-11-lo2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ebS-HF-wBT" firstAttribute="top" secondItem="AdC-11-lo2" secondAttribute="top" id="1oY-jc-KYC"/>
+                            <constraint firstItem="ebS-HF-wBT" firstAttribute="bottom" secondItem="AdC-11-lo2" secondAttribute="bottom" id="Mhc-Ow-i5a"/>
+                            <constraint firstItem="ebS-HF-wBT" firstAttribute="trailing" secondItem="AdC-11-lo2" secondAttribute="trailing" constant="-20" id="N8i-xf-WVu"/>
+                            <constraint firstItem="ebS-HF-wBT" firstAttribute="leading" secondItem="AdC-11-lo2" secondAttribute="leading" constant="20" id="p7c-Gs-8D1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblPrompt" destination="YVT-o4-z6N" id="xrk-vl-SEC"/>
+                        <outlet property="pVGrade" destination="2dJ-iy-SnF" id="F5Z-Hf-Fsb"/>
+                        <outlet property="pVProductName" destination="L8p-pC-3Pr" id="yDh-ur-6ci"/>
+                        <outlet property="pVQuantity" destination="frT-jL-NkR" id="qfg-K6-Fc4"/>
+                        <outlet property="pVUnit" destination="9q8-eT-7gL" id="p1I-Rs-wYU"/>
+                        <outlet property="tVNotes" destination="dD4-wC-lqu" id="dfZ-EH-Gtr"/>
+                        <outlet property="vContainer" destination="ebS-HF-wBT" id="dXc-Zr-BWQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2x-ru-kJm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -679,6 +783,9 @@
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                             <color key="textColor" name="AccentColor"/>
                         </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -697,6 +804,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G25-B6-p14">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" name="AccentColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="oCD-dQ-BSs" kind="relationship" relationship="rootViewController" id="jlP-OA-Ynz"/>
@@ -714,6 +828,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EUJ-F0-mmn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" name="AccentColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                            <color key="textColor" name="AccentColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="ZsF-AI-YL3" kind="relationship" relationship="rootViewController" id="PtO-M5-w6g"/>
@@ -735,6 +857,9 @@
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                             <color key="textColor" name="AccentColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -765,6 +890,9 @@
         <namedColor name="verified">
             <color red="0.28200000524520874" green="0.80000001192092896" blue="0.40400001406669617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

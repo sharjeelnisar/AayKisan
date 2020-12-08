@@ -37,3 +37,9 @@ enum ProductGrade: String {
     case B
     case C
 }
+
+enum PlaceHolders: String {
+    case emptyString = ""
+    case space = " "
+    case unavailable = "N/A"
+}
