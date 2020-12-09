@@ -46,14 +46,14 @@ class SellVC: UIViewController {
     }
 
     @IBAction func onBtnDemandsPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: Segues.SellToProducts.rawValue, sender: self)
+        self.performSegue(withIdentifier: Segues.SellToDemands.rawValue, sender: self)
     }
     
     @IBAction func onBtnOrdersPressed(_ sender: Any) {
         self.performSegue(withIdentifier: Segues.SellToOrders.rawValue, sender: self)
     }
     @IBAction func onBtnProductsPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: Segues.SellToDemands.rawValue, sender: self)
+        self.performSegue(withIdentifier: Segues.SellToProducts.rawValue, sender: self)
     }
     
 }

@@ -8,6 +8,7 @@
 import Foundation
 
 enum Segues: String {
+    case WelcomeToGrow = "segue_welocme_grow"
     case HelpToMenuSegue = "segue_help_menu"
     case CategoryToProducts = "segue_category_product"
     case ProductToProductDetail = "segue_product_detail"
