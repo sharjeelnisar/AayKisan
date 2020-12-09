@@ -9,7 +9,12 @@ import UIKit
 
 class GrowVC: UIViewController {
 
+    
+    @IBOutlet weak var vSubmitPost: UIView!
     @IBOutlet weak var tblVPosts: UITableView!
+    @IBOutlet weak var tFSubmitPost: UITextField!
+    @IBOutlet weak var btnSubmitPost: UIButton!
+    @IBOutlet weak var btnAttachment: UIButton!
     
     let cellReuseIdentifier = "PostTableViewCell"
     var isNetworkAvailable = true
@@ -23,6 +28,8 @@ class GrowVC: UIViewController {
     }
     
     func configureLayout() {
+        self.vSubmitPost.applyCustomShadowEffectToView()
+        self.tFSubmitPost.applyBorderToView()
         self.tblVPosts.dataSource = self
         self.tblVPosts.delegate = self
     }
