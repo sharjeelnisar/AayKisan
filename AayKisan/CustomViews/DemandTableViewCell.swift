@@ -15,6 +15,7 @@ class DemandTableViewCell: UITableViewCell {
     @IBOutlet weak var lblUnit: UILabel!
     @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var btnSubmitBid: UIButton!
     
     var currentDemand: Demand?
     
@@ -36,5 +37,8 @@ class DemandTableViewCell: UITableViewCell {
             self.lblAddress.text = demand.address
             self.lblDate.text = demand.date
         }
+    }
+    
+    @IBAction func onBtnSubmitBidPressed(_ sender: Any) {
     }
 }
