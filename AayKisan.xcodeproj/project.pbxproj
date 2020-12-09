@@ -42,6 +42,7 @@
 		EEB9BE6F257E8DC800A383AA /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9BE6E257E8DC800A383AA /* ProductsVC.swift */; };
 		EEB9BE74257E8EAE00A383AA /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9BE73257E8EAE00A383AA /* ProductsTableViewCell.swift */; };
 		EEB9BE82257EA95700A383AA /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9BE81257EA95700A383AA /* ProductDetailVC.swift */; };
+		EEDCD31D25811E030023C97A /* TapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCD31C25811E030023C97A /* TapDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		EEB9BE6E257E8DC800A383AA /* ProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
 		EEB9BE73257E8EAE00A383AA /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
 		EEB9BE81257EA95700A383AA /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
+		EEDCD31C25811E030023C97A /* TapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				EE67F421257CDB82006C7E1C /* PostCellDelegate.swift */,
+				EEDCD31C25811E030023C97A /* TapDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			files = (
 				EEA51C8C257BAD6900A6689B /* SellVC.swift in Sources */,
 				EE608F04257FC415008EE9C8 /* OrdersVC.swift in Sources */,
+				EEDCD31D25811E030023C97A /* TapDelegate.swift in Sources */,
 				EEB9BE74257E8EAE00A383AA /* ProductsTableViewCell.swift in Sources */,
 				EEA51C27257B99B500A6689B /* AppDelegate.swift in Sources */,
 				EEA51C82257BAD1C00A6689B /* GrowVC.swift in Sources */,
@@ -610,6 +614,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = ESFT86T8ZD;
 				INFOPLIST_FILE = AayKisan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -632,6 +637,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = ESFT86T8ZD;
 				INFOPLIST_FILE = AayKisan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

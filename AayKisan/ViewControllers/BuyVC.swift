@@ -12,7 +12,6 @@ class BuyVC: UIViewController {
     @IBOutlet weak var vContainer: UIView!
     @IBOutlet weak var vDemand: UIView!
     @IBOutlet weak var btnDemand: UIButton!
-    
     @IBOutlet weak var tblViewCategories: UITableView!
     
     let cellReuseIdentifier = "CategoryTableViewCell"
@@ -69,7 +68,7 @@ extension BuyVC: UITableViewDataSource {
 }
 
 extension BuyVC: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         DispatchQueue.main.async {
             self.selectedCategory = self.categories[indexPath.row]
             self.performSegue(withIdentifier: Segues.CategoryToProducts.rawValue, sender: self)
