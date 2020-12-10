@@ -46,6 +46,11 @@ class BuyVC: UIViewController {
             }
         }
     }
+    
+    @IBAction func onBtnMapPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: Segues.BuyToMap.rawValue, sender: self)
+    }
+    
     @IBAction func onBtnDemandPressed(_ sender: Any) {
         self.performSegue(withIdentifier: Segues.BuyToDemand.rawValue, sender: self)
     }

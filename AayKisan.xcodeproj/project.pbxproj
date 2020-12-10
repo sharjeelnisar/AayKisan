@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE0344CA25823A6D00448F5E /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0344C925823A6D00448F5E /* MapVC.swift */; };
 		EE608EEB257F7202008EE9C8 /* DemandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE608EEA257F7202008EE9C8 /* DemandVC.swift */; };
 		EE608EF6257F797B008EE9C8 /* QuickPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE608EF5257F797B008EE9C8 /* QuickPickerView.swift */; };
 		EE608F04257FC415008EE9C8 /* OrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE608F03257FC415008EE9C8 /* OrdersVC.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE0344C925823A6D00448F5E /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		EE608EEA257F7202008EE9C8 /* DemandVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemandVC.swift; sourceTree = "<group>"; };
 		EE608EF5257F797B008EE9C8 /* QuickPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickPickerView.swift; sourceTree = "<group>"; };
 		EE608F03257FC415008EE9C8 /* OrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersVC.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				EE608F03257FC415008EE9C8 /* OrdersVC.swift */,
 				EE608F08257FC480008EE9C8 /* DemandsVC.swift */,
 				EE608F2F258079EC008EE9C8 /* WelcomeVC.swift */,
+				EE0344C925823A6D00448F5E /* MapVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				EEA51C87257BAD5B00A6689B /* BuyVC.swift in Sources */,
 				EEA51C29257B99B500A6689B /* SceneDelegate.swift in Sources */,
 				EEA51C99257BB08900A6689B /* Post.swift in Sources */,
+				EE0344CA25823A6D00448F5E /* MapVC.swift in Sources */,
 				EEB9BE65257E7C1C00A383AA /* CategoryTableViewCell.swift in Sources */,
 				EE608EF6257F797B008EE9C8 /* QuickPickerView.swift in Sources */,
 			);
