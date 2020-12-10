@@ -16,6 +16,8 @@ enum Segues: String {
     case SellToDemands = "segue_sell_demands"
     case SellToProducts = "segue_sell_products"
     case SellToOrders = "segue_sell_orders"
+    case BuyToMap = "segue_buy_map"
+    case MapToProductDetail = "segue_map_product_detail"
 }
 
 enum HelpLineNumbers: String {
