@@ -13,7 +13,7 @@ Shortage or demand-supply gap, of inevitable vegetables, cause sudden hikes in t
 # Solution
 =======================================
 
-AayKisan is a digital platform, comprising of a website and mobile applications,  to provide business model, payment gateway, logistics and technical assistance to encourage and facilitate communities / households / kitchen gardeners
+AayKisan is a digital platform, comprising of a website and mobile applications, to provide business model, payment gateway, logistics and technical assistance to encourage and facilitate communities / households / kitchen gardeners. It helps budding entrepreneurs to showcase their unique products and enhance their business.
 
 
 # Team
